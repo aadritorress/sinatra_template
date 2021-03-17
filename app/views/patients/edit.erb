@@ -1,0 +1,19 @@
+<h1> Update patient information </h1>
+
+<form action="/patients/<%= @patient.id %>" method="post">
+<input type="hidden" name="_method" value='patch'>
+<p> patient's name: <input type="text" name="name" value= <%= @patient.name %> ></p>
+
+<br>
+<label> Doctor </label>
+<select name="doctor_id">
+<% @doctors.each do  | doctor | %>
+    <option value=<%= doctor.id%> >  <%= doctor.name%>    </option>
+<% end %>
+</select>
+<br>
+<br>
+
+<input type="submit">
+
+</form>

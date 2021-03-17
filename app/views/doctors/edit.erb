@@ -1,0 +1,8 @@
+<h1> Update doctor information </h1>
+
+<form action="/doctors/<%= @doctor.id %>" method="post">
+<input type="hidden" name="_method" value='patch'>
+<p> Doctor's name: <input type="text" name="name" value= <%= @doctor.name %> ></p>
+<input type="submit">
+
+</form>

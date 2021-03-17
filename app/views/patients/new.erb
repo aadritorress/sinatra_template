@@ -1,0 +1,16 @@
+<h1> Create a new patient</h1>
+
+<form method="post" action="/patients">
+<label> Patient </label>
+<p> Name: <input type="text" name="name"></p>
+<br>
+<label> Doctor </label>
+<select name="doctor_id">
+<% @doctors.each do  | doctor | %>
+    <option value=<%= doctor.id%> >  <%= doctor.name%>    </option>
+<% end %>
+</select>
+<br>
+<br>
+<input type="submit">
+</form>

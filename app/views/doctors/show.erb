@@ -1,0 +1,22 @@
+<body>
+
+<p> Doctor Name: <%= @doctor.name %></p>
+
+<label> List of patients </label>
+
+<ul> 
+<% @patients.map do |patient| %>
+<% if patient.doctor == @doctor %>
+<li> <%= patient.name %> </li>
+<% end %> 
+<% end %> 
+</ul>
+
+<form action="/doctors/<%= @doctor.id %>" method="post">
+<input type="hidden" name="_method" value='delete'>
+
+<input type="submit" value = "delete">
+
+</form>
+
+</body>

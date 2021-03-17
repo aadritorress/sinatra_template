@@ -1,0 +1,11 @@
+<body>
+<p> Patient Name: <%= @patient.name %></p>
+
+<form action="/patients/<%= @patient.id %>" method="post">
+<input type="hidden" name="_method" value='delete'>
+
+<input type="submit" value = "delete">
+
+</form>
+
+</body>
